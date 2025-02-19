@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import ChangeDeckColorDialog from "@/components/Decks/ChangeDeckColorDialog";
 
 const meta = {
-  title: "Component/ChangeDeckColorDialog",
+  title: "Components/ChangeDeckColorDialog",
   component: ChangeDeckColorDialog,
   parameters: {
     layout: "centered",

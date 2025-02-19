@@ -22,6 +22,7 @@ const Hero = () => {
             className="px-8 py-4 text-xl font-bold text-white bg-green-600 rounded-full hover:bg-green-700 transition-all duration-300 shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            data-testid="get-started-button"
           >
             Get Started
           </motion.button>
