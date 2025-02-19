@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import ChangeDeckColorDialog from "@/components/Decks/ChangeDeckColorDialog";
 
 const meta = {
-  title: "Example/ChangeDeckColorDialog",
+  title: "Component/ChangeDeckColorDialog",
   component: ChangeDeckColorDialog,
   parameters: {
     layout: "centered",
@@ -14,15 +14,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  name: "red",
+  name: "Red",
   render: (args) => <ChangeDeckColorDialog {...args} />,
   args: {
     id: "1000",
-    deckName: "deckdeck",
+    deckName: "Testing Deck",
     userId: "1000",
     cardCount: 5,
     color: "red",
-    createdAt: "k",
+    createdAt: "2024-12-21 01:09:08.879055",
   },
 };
 
