@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
+import { expect, userEvent, within } from "@storybook/test";
 import ChangeDeckColorDialog from "@/components/Decks/ChangeDeckColorDialog";
 
 const meta = {
@@ -7,6 +7,12 @@ const meta = {
   component: ChangeDeckColorDialog,
   parameters: {
     layout: "centered",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const aboutButton = canvas.getByTestId("change-color-trigger");
+    await expect(aboutButton).toBeInTheDocument();
+    await userEvent.click(aboutButton);
   },
 } satisfies Meta<typeof ChangeDeckColorDialog>;
 
