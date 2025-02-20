@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import LoginButton from "./LandingHeaderComponents/LoginButton"
+import SignUpButton from "./LandingHeaderComponents/SignUpButton";
 
 interface LandingHeaderProps {
   refs?: {
@@ -108,18 +110,8 @@ const LandingHeader: React.FC<LandingHeaderProps> = ({ refs }) => {
           >
             FAQs
           </button>
-          <Link
-            to="/login"
-            className="block py-2 text-gray-600 hover:text-green-600 transition-colors"
-          >
-            Log In
-          </Link>
-          <Link
-            to="/register"
-            className="block py-2 text-gray-600 hover:text-green-600 transition-colors"
-          >
-            Sign Up
-          </Link>
+          <LoginButton />
+          <SignUpButton />
         </motion.div>
       )}
     </motion.header>
