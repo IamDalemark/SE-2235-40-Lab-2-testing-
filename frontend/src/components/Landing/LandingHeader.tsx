@@ -36,6 +36,7 @@ const LandingHeader: React.FC<LandingHeaderProps> = ({ refs }) => {
           <button
             onClick={() => refs?.aboutRef && scrollToSection(refs.aboutRef)}
             className="text-gray-600 hover:text-green-600 transition-colors"
+            data-testid="about-button"
           >
             About
           </button>

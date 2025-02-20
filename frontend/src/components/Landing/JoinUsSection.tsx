@@ -39,6 +39,7 @@ const JoinUsSection = () => {
                 px-10 py-4 rounded-full
                 transition-colors duration-300 ease-in-out 
                 hover:bg-green-700 shadow-lg"
+                data-testid="start-learning-now-button"
               >
                 Start Learning Now
               </motion.button>

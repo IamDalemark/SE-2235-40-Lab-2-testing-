@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  name: "Red",
+  name: "Select Red",
   render: (args) => <ChangeDeckColorDialog {...args} />,
   args: {
     id: "1000",
@@ -26,7 +26,7 @@ export const Primary: Story = {
   },
 };
 
-export const Blue: Story = {
+export const SelectBlue: Story = {
   render: (args) => <ChangeDeckColorDialog {...args} />,
   args: {
     ...Primary.args,
@@ -34,7 +34,7 @@ export const Blue: Story = {
   },
 };
 
-export const Green: Story = {
+export const SelectGreen: Story = {
   render: (args) => <ChangeDeckColorDialog {...args} />,
   args: {
     ...Primary.args,

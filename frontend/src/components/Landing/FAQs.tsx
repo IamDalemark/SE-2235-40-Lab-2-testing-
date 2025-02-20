@@ -20,10 +20,16 @@ const FAQs = () => {
           value="question-1"
           className="border-gray-100 py-1 px-4 rounded-xl border shadow-md bg-white"
         >
-          <AccordionTrigger className="text-xl">
+          <AccordionTrigger
+            className="text-xl"
+            data-testid="what-is-notetube-accordion-trigger"
+          >
             What is NoteTube?
           </AccordionTrigger>
-          <AccordionContent className="text-gray-600">
+          <AccordionContent
+            className="text-gray-600"
+            data-testid="what-is-notetube-accordion-content"
+          >
             NoteTube is a web app that allows users to upload their notes and
             generates summarized content, relevant YouTube videos, and
             flashcards to help with study and review.

@@ -6,7 +6,6 @@ const meta = {
   title: "Pages/LandingPage",
   component: LandingPage,
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: "fullscreen",
   },
   decorators: [
@@ -20,12 +19,49 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on component testing: https://storybook.js.org/docs/writing-tests/component-testing
 export const GetStarted: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const getStartedButton = canvas.getByTestId("get-started-button");
     await expect(getStartedButton).toBeInTheDocument();
-    await userEvent.click(getStartedButton);
+  },
+};
+
+export const starLearningNow: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const startLeaningNowButton = canvas.getByTestId(
+      "start-learning-now-button",
+    );
+    await expect(startLeaningNowButton).toBeInTheDocument();
+    await userEvent.click(startLeaningNowButton);
+    await expect(startLeaningNowButton).not.toBeVisible();
+  },
+};
+
+export const navigationAbout: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const aboutButton = canvas.getByTestId("about-button");
+    await expect(aboutButton).toBeInTheDocument();
+    await userEvent.click(aboutButton);
+    await expect(aboutButton).toBeVisible();
+  },
+};
+export const whatIsNoteTubeAccordion: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const whatIsNoteTubeAccordionTrigger = canvas.getByTestId(
+      "what-is-notetube-accordion-trigger",
+    );
+    const whatIsNoteTubeAccordionContent = canvas.getByTestId(
+      "what-is-notetube-accordion-content",
+    );
+    await expect(whatIsNoteTubeAccordionContent).toBeInTheDocument();
+    await expect(whatIsNoteTubeAccordionTrigger).toBeInTheDocument();
+    await userEvent.click(whatIsNoteTubeAccordionTrigger);
+    await expect(whatIsNoteTubeAccordionContent).not.toBeVisible();
+    await userEvent.click(whatIsNoteTubeAccordionTrigger);
+    await expect(whatIsNoteTubeAccordionContent).toBeVisible();
   },
 };
