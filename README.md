@@ -1,4 +1,4 @@
-﻿## SE 2144 FINAL PROJECT
+﻿## SE 2235-40 lab 2 testing
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ To get started, follow the steps below:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/BB6-SE/se-2144-final-project
+git clone https://github.com/IamDalemark/SE-2235-40-Lab-2-testing-.git
 ```
 
 ### Install all dependencies
